@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6056BA54220381CA00797512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA53220381CA00797512 /* AppDelegate.swift */; };
-		6056BA56220381CA00797512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA55220381CA00797512 /* ViewController.swift */; };
 		6056BA59220381CA00797512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6056BA57220381CA00797512 /* Main.storyboard */; };
 		6056BA5B220381CC00797512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6056BA5A220381CC00797512 /* Assets.xcassets */; };
 		6056BA5E220381CC00797512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6056BA5C220381CC00797512 /* LaunchScreen.storyboard */; };
 		6056BA69220381CD00797512 /* SpeechRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA68220381CD00797512 /* SpeechRecognitionTests.swift */; };
 		6056BA74220381CD00797512 /* SpeechRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA73220381CD00797512 /* SpeechRecognitionUITests.swift */; };
+		6056BA842203839800797512 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA832203839800797512 /* RecordingViewController.swift */; };
+		6056BA872203859400797512 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056BA862203859400797512 /* Recording.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		6056BA50220381CA00797512 /* SpeechRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6056BA53220381CA00797512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6056BA55220381CA00797512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6056BA58220381CA00797512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6056BA5A220381CC00797512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6056BA5D220381CC00797512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		6056BA6F220381CD00797512 /* SpeechRecognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechRecognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6056BA73220381CD00797512 /* SpeechRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionUITests.swift; sourceTree = "<group>"; };
 		6056BA75220381CD00797512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6056BA832203839800797512 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		6056BA862203859400797512 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		6056BA47220381CA00797512 = {
 			isa = PBXGroup;
 			children = (
+				6056BA852203858700797512 /* Model */,
 				6056BA52220381CA00797512 /* SpeechRecognition */,
 				6056BA67220381CD00797512 /* SpeechRecognitionTests */,
 				6056BA72220381CD00797512 /* SpeechRecognitionUITests */,
@@ -98,8 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				6056BA53220381CA00797512 /* AppDelegate.swift */,
-				6056BA55220381CA00797512 /* ViewController.swift */,
 				6056BA57220381CA00797512 /* Main.storyboard */,
+				6056BA832203839800797512 /* RecordingViewController.swift */,
 				6056BA5A220381CC00797512 /* Assets.xcassets */,
 				6056BA5C220381CC00797512 /* LaunchScreen.storyboard */,
 				6056BA5F220381CC00797512 /* Info.plist */,
@@ -123,6 +126,14 @@
 				6056BA75220381CD00797512 /* Info.plist */,
 			);
 			path = SpeechRecognitionUITests;
+			sourceTree = "<group>";
+		};
+		6056BA852203858700797512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6056BA862203859400797512 /* Recording.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6056BA56220381CA00797512 /* ViewController.swift in Sources */,
+				6056BA842203839800797512 /* RecordingViewController.swift in Sources */,
+				6056BA872203859400797512 /* Recording.swift in Sources */,
 				6056BA54220381CA00797512 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +445,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAQY4YN2JJ;
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAQY4YN2JJ;
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
